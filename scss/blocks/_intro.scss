@@ -1,0 +1,114 @@
+.intro{
+    background: #014E56;
+    overflow: hidden;
+    position: relative;
+    .intro__img{
+        position: absolute;
+        left: -100px;
+        top: 100px;
+    }
+    .intro__container{
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 0px 50px;
+        
+        .intro__title{
+            font-size: 6.25rem;
+            color: $defaultColor;
+            font-weight: 700;
+            max-width: 565px;
+            line-height: 100px;
+            span{
+                color: #F67E7E;
+            }
+        }
+        .intro__paragraph{
+            font-size: 1.125rem;
+            max-width: 460px;
+            padding: 160px 0;
+            letter-spacing: 1px;
+            color: $defaultColor;
+            position: relative;
+            display: block;
+            line-height: 28px;
+
+            &::before{
+                @include before;
+            }
+        }
+    }
+    .combined-shape{
+        position: absolute;
+        top: 430px;
+        left: 63.5%;
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .intro{
+        .intro__img{
+            display: none;
+        }
+        .intro__container{
+            text-align: center;
+            display: block;
+            width: 100%;
+            padding: 20px 0px;
+            .intro__title{
+             font-size: 4rem;
+             max-width: 350px;
+             margin: 0 auto;
+             margin-top: 50px;
+             line-height: 4.3rem;
+            }
+            .intro__paragraph{
+             font-size: $defaultSize;
+             line-height: 28px;
+             padding: 0 0 200px;
+             margin: 0 auto;
+             margin-top: 30px;
+             &::before{
+                 display: none;
+             }
+            }
+         }
+        .combined-shape{
+            left: 30%;
+            max-width: 300px;
+            top: 490px;
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .intro{
+        .intro__container{
+            text-align: center;
+            display: block;
+            width: 100%;
+            padding: 20px 0px;
+            .intro__title{
+             font-size: 4rem;
+             max-width: 350px;
+             margin: 0 auto;
+             margin-top: 50px;
+             line-height: 4.3rem;
+            }
+            .intro__paragraph{
+             font-size: $defaultSize;
+             line-height: 28px;
+             padding: 0 0 200px;
+             margin: 0 auto;
+             margin-top: 30px;
+             &::before{
+                 display: none;
+             }
+            }
+         }
+        .combined-shape{
+            left: 12%;
+            max-width: 300px;
+            top: 490px;
+        }
+    }
+}

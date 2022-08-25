@@ -1,0 +1,155 @@
+.header{
+    background-color: $defaultBgColor;
+    .header__container{
+        padding: 50px 0px 0px 0px;
+        display: flex;
+        align-items: center;
+        .header__link{
+            padding: 0;
+            display: flex;
+            flex: 2;
+        }
+        .header__dropdown{
+            display: flex;
+            flex: 10;
+            justify-content: space-between;
+            
+            .navbar{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .navbar__list{
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+                    .navbar__list-item{
+                        margin: 0px 0px 0px 20px;
+                        a{
+                            @include link;
+                        }
+                    }
+                }
+                .button{
+                    @include button;
+                    border: 2px solid $defaultColor;
+                    color: $defaultColor;
+                }
+                .button:hover{
+                    background-color: $defaultColor;
+                    border: none;
+                    color: #002529;
+                }
+                .oval-img{
+                    display: none;
+                }
+            }
+            
+        }
+
+        .burger{
+            width: 20px;
+            height: 17px;
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            .dropdown-menu{
+                width: 20px;
+                height: 3px;
+                background-color: $defaultColor;
+                display: block;
+                position: relative;
+                &::before{
+                    content: '';
+                    display: block;
+                    background-color: inherit;
+                    display: block;
+                    width: 20px;
+                    height: 3px;
+                    position: absolute;
+                    top: -7px;
+                }
+                &::after{
+                    content: '';
+                    display: block;
+                    background-color: inherit;
+                    display: block;
+                    width: 20px;
+                    height: 3px;
+                    position: absolute;
+                    top: 7px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: $tablet) {
+    .header{
+        .header__container{
+            padding: 45px 0px 0px 0px;
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .header{
+        position: relative;
+        .header__container{
+            padding: 35px 0px 0px 0px;
+            .header__dropdown{
+                max-width: 250px;
+                .navbar{
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    width: 300px;
+                    transform: translateX(100%);
+                    background-color: #2C6269;
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    top: 74px;
+                    height: 100vh;
+                    right: 0px;
+                    z-index: 10;
+                    transition: 3s;
+                    .navbar__list{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        margin-top: 100px;
+                        .navbar__list-item{
+                            margin-right: 95%;
+                        }
+                    }
+                    .button{
+                        position: absolute;
+                        top: 220px;
+                        left: 30px;
+                    }
+                    .oval-img{
+                        display: block;
+                        position: absolute;
+                        bottom: 0px;
+                        right: 0px;
+                        
+                    }
+                }
+                
+                .burger{
+                    display: block;
+                    position: absolute;
+                    top: 60%;
+                    right: 80px;
+                }
+                .burger:hover ~ .navbar{
+                    display: block;
+                    right: 300px;
+                }
+            }
+            
+            
+            
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.start{
+    background-color: #F67E7E;
+    padding: 76px 0px;
+    position: relative;
+    overflow: hidden;
+    .start__img{
+        position: absolute;
+        bottom: -100px;
+    }
+    .start__container{
+        display: flex;
+        justify-content: space-around;
+        .start__title{
+            font-size: 3rem;
+            color: #012F34;
+            line-height: 3rem;
+            font-weight: 900;
+            font-style: normal;
+        }
+        .start__btn{
+            @include button;
+            border: 2px solid #012F34;
+            color: #012F34;
+        }
+        .start__btn:hover{
+            background: #012F34;
+            color: $defaultColor;
+        }
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .start{
+        padding: 84px 0;
+        .start__container{
+            align-items: center;
+            .start__title{
+                font-size: 2rem;
+                line-height: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .start{
+        padding: 83px 0;
+        .start__container{
+            flex-direction: column;
+            text-align: center;
+            .start__title{
+                max-width: 300px;
+                letter-spacing: 1.5px;
+                padding: 0px 0px 30px;
+            }
+            .start__btn{
+                z-index: 100;
+            }
+        }
+    }
+}

@@ -1,0 +1,154 @@
+.delivering{
+    padding: 140px 0;
+    background-color: #004047;
+    position: relative;
+    overflow: hidden;
+    .delivering__img{
+        position: absolute;
+        top: 0px;
+    }
+    .delivering__container{
+        .delivering__title{
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 3rem;
+            color: $defaultColor;
+            max-width: 870px;
+            margin: 0 auto;
+            text-align: center;
+            span{
+                color: #79C8C7;
+            }
+        }
+        .delivering__list{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-between;
+            padding: 92px 0px 0px;
+            .delivering__list-item{
+                text-align: center;
+                justify-content: center;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                .quotation-mark{
+                    position: relative;
+                    display: block;
+                    z-index: 1;
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 67px;
+                        height: 56px;
+                        position: absolute;
+                        background-image: url(../../images/quatation-mark.svg);
+                        top: -20px;
+                        left: 140px;
+                        z-index: 1;
+                    }
+                }
+                .delivering__list-text{
+                    color: $defaultColor;
+                    font-size: $defaultSize;
+                    max-width: 350px;
+                    z-index: 2;
+                    line-height: 25px;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+                .delivering__list-title{
+                    color: #79C8C7;
+                    font-size: 1.125rem;
+                    line-height: 28px;
+                    letter-spacing: 1px;
+                    font-weight: 700;
+                    font-style: normal;
+                    margin: 0;
+                }
+                .delivering__list-paragraph{
+                    font-size: 0.813rem;
+                    color: $defaultColor;
+                    line-height: 18px;
+                }
+                .profile-img{
+                    width: 62px;
+                    height: 62px;
+                    margin: 0 auto;
+                    padding-top: 30px;
+                }
+            }
+        }
+    }
+    .delivering__combination{
+        position: absolute;
+        bottom: -100px;
+        right: 0px;
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .delivering{
+        padding: 100px 0;
+        .delivering__container{
+            .delivering__title{
+                font-size: 32px;
+                line-height: 32px;
+                max-width: 503px;
+            }
+            .delivering__list{
+                flex-direction: column;
+                width: 100%;
+                margin: 0 auto;
+                .delivering__list-item{
+                    width: 100%;
+                    margin: 0 auto;
+                    margin-top: 50px;
+                    .quotation-mark{
+                        padding: 0;
+                        width: 100%;
+                        &::before{
+                            left: 320px;
+                        }
+                    }
+                    .delivering__list-text{
+                        max-width: 600px;
+                        margin: 0 auto;
+                        padding: 10px 0px 25px;
+                    }
+                }
+                .delivering__list-item:first-child{
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: $mobile) {
+    .delivering{
+        padding: 140px 0;
+        .delivering__container{
+            .delivering__title{
+                max-width: 300px;
+                line-height: 40px;
+            }
+            .delivering__list{
+                flex-direction: column;
+                padding: 0;
+                .delivering__list-item{
+                    margin-top: 70px;
+                    .quotation-mark{
+                        margin: 0;
+                        &::before{
+                            left: 145px;
+                        }
+                    }
+                }
+                .delivering__list-item:first-child{
+                    margin-top: 70px;
+                }
+            }
+        }
+    }
+}

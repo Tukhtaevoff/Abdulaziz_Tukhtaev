@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Livvic', sans-serif, Arial,;
+    margin: 0;
+    padding: 0;
+}
