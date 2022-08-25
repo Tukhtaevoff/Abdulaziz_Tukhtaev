@@ -1,35 +1,215 @@
-.container{
-    width: 1200px;
-    margin: 0 auto;
-    background-color: #000000;
-    border-radius: 50px;
-    margin-top: 150px;
+body{
+    background-color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(../images/bg-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
-.container:hover{
-    box-shadow: 25px 25px 25px 25px #393939;
+.container{
+    margin: 0 auto;
+    width: 1366px;
+    padding: 60px 0px;
+    text-align: center;
+}
+.title{
+    font-size: 3rem;
+    color: aliceblue;
+}
+.form{
+    width: 600px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 30px 0px;
+}
+label{
+    font-size: 1.4rem;
+    color: aliceblue;
+}
+.input{
+    width: 250px;
+    height: 30px;
+    font-size: 1.2rem;
+    text-align: center;
+    background: transparent;
+    color: #fff;
+    outline: none;
+}
+.buttons__wrapper{
+    display: flex;
+}
+.check-btn{
+    width: 90px;
+    height: 35px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #ddd;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+.check-btn:hover{
+    background-color: #fff;
+    color: #000;
+    border: none;
+}
+.reset{
+    width: 70px;
+    height: 35px;
+    border: 1px solid #fff;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.reset:hover{
+    background-color: #fff;
+    color: #000;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+}
+.list{
+    display: flex;
+    padding: 40px 0px 0px;
+    width: 100%;
+    list-style: none;
+    justify-content: space-evenly;
+}
+.list__item{
+    width: 250px;
+    padding: 20px 0px;
+    background-color: #fff;
+    border: 1.5px solid;
+    border-radius: 10px;
+    text-align: center;
+    height: 220px;
+}
+h3{
+    font-size: 1.2rem;
+    font-weight: 600;
     cursor: pointer;
 }
-.text{
-    color: #fff;
-    text-shadow: 10px 10px 10px 10px #000000;
-    font-weight: 700;
-    text-align: center;
-    font-size: 3rem;
-    width: 1000px;
+p{
+    width: 230px;
     margin: 0 auto;
-    padding: 100px 0px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.125rem;
+    color: green;
+    font-weight: 600;
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 1200px) {
+    body {
+        background-size: cover;
+    }
     .container{
-        width: 380px;
+        max-width: 800px;
+    }
+    .title{
+        font-size: 1.5rem;
+        max-width: 500px;
         margin: 0 auto;
     }
-    .text{
-        font-size: 1.125rem;
-        width: 300px;
+    form{
+        max-width: 500px;
+        flex-direction: column;
         text-align: center;
+        justify-content: center;
+    }
+    label{
+        font-size: 1.125rem;
+    }
+    .input{
+        margin-top: 20px;
+    }
+    .buttons__wrapper{
+        margin-top: 20px;
+    }
+    .check-btn{
+        margin-right: 10px;
+    }
+    .reset{
+        margin-left: 10px;
+    }
+    .list{
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: center;
         margin: 0 auto;
-        padding: 40px 0px 40px;
+        gap: 50px;
+    }
+    .list__item{
+        width: 210px;
+        height: 160px;
+    }
+    img{
+        width: 70px;
+        height: 60px;
+    }
+    h3{
+        font-size: 1.1rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 750px) {
+    body{
+        overflow: hidden;
+    }
+    .container{
+        width: 350px;
+    }
+    .title{
+        font-size: 1.2rem;
+    }
+    form{
+        max-width: 100%;
+    }
+    label{
+        padding-top: 10px;
+        gap: 20px;
+    }
+    .input{
+        width: 200px;
+        font-size: 1.05rem;
+    }
+    .buttons__wrapper{
+        flex-direction: column;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .check-btn{
+        margin-top: 30px;
+    }
+    .reset{
+        margin-top: 30px;
+    }
+    .list{
+        gap: 35px;
+    }
+    .list__item{
+        width: 190px;
+        height: 140px;
+    }
+    img{
+        width: 60px;
+        height: 50px;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 0.875rem;
+        max-width: 160px;
     }
 }

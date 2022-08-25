@@ -4,13 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Davlat Test Markazi</title>
+    <title>Masofa hisoblash</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <div class="container">
-        <p class="text"></p>
+        <h2 class="title">Kim birinchi bo-rish-ga!</h2>
+        <form class="form">
+            <label>Distance</label>
+            <input type="text" placeholder="Type your distance here" class="input">
+            <div class="buttons__wrapper">
+                <button class="check-btn" type="button">
+                    Check
+              </button>
+              <button class="reset" type="button" onclick="reset()">
+                  Reset
+              </button>
+            </div>
+            
+        </form>
+        <ul class="list">
+             <li class="list__item">
+                <img src="./images/man-icon.jpg" alt="human img" width="120" height="90">
+                <h3>Piyoda</h3>
+                <p class="free"></p>
+             </li>
+             <li class="list__item">
+                <img src="./images/bike-img.png" alt="bike img" width="120" height="90">
+                <h3>Velosiped</h3>
+                <p class="bycycle"></p>
+             </li>
+             <li class="list__item">
+                <img src="./images/car-img.jpg" alt="car img" width="120" height="90">
+                <h3>Mashina</h3>
+                <p class="car"></p>
+             </li>
+             <li class="list__item"> 
+                <img src="./images/plane-img.jpg" alt="plane img" width="120" height="90">
+                <h3>Samolyot</h3>
+                <p class="plane"></p>
+             </li>
+        </ul>
     </div>
-    <script src="JavaScript/main.js"></script>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>
