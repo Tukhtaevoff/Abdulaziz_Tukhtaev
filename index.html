@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questions</title>
+    <title>Time Calculator</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <div id="container">
-        <div class="question">
-            <form id="form">
-                <label for="input">
-                    <span id="text">what is the capital of australia?</span>
-                    <input id="input" placeholder="Answer">
-                </label>
-                <button id="button">Guess</button>
-            </form>
-        </div>
+    <div class="container">
+        <form class="form">
+            <input autocomplete="off" id="input" type="number">
+            <button class="button" type="submit">Check it</button>
+        </form>
+        <p class="result-text">Just write numbers as milli second</p>
     </div>
+        
+
+        <script src="./JavaScript/main.js"></script>
     
-    <script src="./JavaScript/main.js"></script>
 </body>
 </html>
