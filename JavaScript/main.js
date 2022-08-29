@@ -106,7 +106,7 @@ const weightKg = [];
 //     textEl10.textContent = `Weight(kg) = ${weightKg}`;
 // });
 
-// Filter
+// // Filter
 product.filter( (product) => {
     // Name
     name1.push(product.name);
@@ -139,4 +139,10 @@ product.filter( (product) => {
     weightKg.push(product.weightKg);
     textEl10.textContent = `Weight(kg) = ${weightKg}`;
 });
+
+
+
+
+
+
 
